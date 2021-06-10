@@ -10,6 +10,4 @@ export default class GenContainerComponent extends Component {
             return total += item.count;
         },0);
     }
-
-
 }

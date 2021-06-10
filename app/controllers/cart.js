@@ -7,7 +7,7 @@ export default class CartController extends Controller {
 
   get subtotal() {
     return this.cart.itemList.reduce((acc, item) => {
-      return acc + item.price;
+      return acc + item.price * item.count;
     }, 0);
   }
 
