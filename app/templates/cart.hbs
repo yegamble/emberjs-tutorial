@@ -10,7 +10,7 @@
     <li class="breadcrumb-item">Shopping Cart</li>
   </ol>
 
-  {{#each this.shoppingCart.itemList as |item|}}
+  {{#each this.cart.itemList as |item|}}
     <div class="cart-item d-flex align-items-center">
       <div class="cart-item-thumbnail">
         <img src={{item.image}} alt="">
@@ -19,6 +19,10 @@
           <h4>{{item.name}}</h4>
           <i class="font-weight-bold">{{currency item.price}}</i>
         </div>
+        <input type="number" 
+        class="ml-auto" 
+        value={{item.count}}
+       {{on "input" (fn this.updateItemCount item )}}>
     </div>    
   {{/each}}
 
