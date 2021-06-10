@@ -1,8 +1,9 @@
 import Component from '@glimmer/component';
 import {inject as service } from '@ember/service';
 
-export default class GeneralContainerComponent extends Component {
+export default class GenContainerComponent extends Component {
 
     @service shoppingCart;
+
 
 }

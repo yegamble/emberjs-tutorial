@@ -1,8 +1,11 @@
 <LinkTo @route="cart" class="cart-link">
   <FaIcon @icon="shopping-cart" />
-  <span class="cart-coutn d-inline-flex justify-content-center align-items-center">
-    1
-  </span>
+  {{#if this.shoppingCart.itemList.length}}
+      <span class="cart-count d-inline-flex justify-content-center align-items-center">
+      {{this.shoppingCart.itemList.length}}
+      </span>
+  {{/if}}
+
 </LinkTo>
 
 <main class="container mt-5">
