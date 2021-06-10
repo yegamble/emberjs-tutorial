@@ -4,7 +4,6 @@ import { action } from '@ember/object'
 
 export default class CartController extends Controller {
   @service('shoppingCart') cart;
-  subtotal;
 
   get subtotal() {
     return this.cart.itemList.reduce((acc, item) => {
